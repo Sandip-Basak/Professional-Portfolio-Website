@@ -34,7 +34,7 @@ export default function VideoSection() {
           className="relative w-full aspect-video bg-ink border border-white/10 group cursor-pointer overflow-hidden"
         >
           <img 
-            src="/public/images/video.jpg" 
+            src="/images/video.jpg" 
             alt="Video Thumbnail" 
             className="w-full h-full object-cover opacity-60 group-hover:opacity-40 transition-opacity duration-500 grayscale contrast-125"
             referrerPolicy="no-referrer"

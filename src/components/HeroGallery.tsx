@@ -2,10 +2,10 @@ import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useSpring, useMotionTemplate, useVelocity, useMotionValueEvent, AnimatePresence } from 'motion/react';
 
 const GIGS = [
-  { id: 1, title: "MADISON SQUARE", date: "OCT 24", img: "/public/images/madison.jpg" },
-  { id: 2, title: "RED ROCKS", date: "NOV 12", img: "/public/images/redrocks.jpg" },
-  { id: 3, title: "WEMBLEY", date: "DEC 05", img: "/public/images/wembley.jpg" },
-  { id: 4, title: "TOKYO DOME", date: "JAN 18", img: "/public/images/tokyodome.jpg" },
+  { id: 1, title: "MADISON SQUARE", date: "OCT 24", img: "/images/madison.jpg" },
+  { id: 2, title: "RED ROCKS", date: "NOV 12", img: "/images/redrocks.jpg" },
+  { id: 3, title: "WEMBLEY", date: "DEC 05", img: "/images/wembley.jpg" },
+  { id: 4, title: "TOKYO DOME", date: "JAN 18", img: "/images/tokyodome.jpg" },
 ];
 
 export default function HeroGallery() {
@@ -128,7 +128,7 @@ export default function HeroGallery() {
             <div className="absolute inset-0 bg-neon mix-blend-overlay opacity-20 z-10 pointer-events-none"></div>
             
             <img
-              src="/public/images/guitarist.jpg"
+              src="/images/guitarist.jpg"
               alt="Guitarist"
               className="absolute inset-0 w-full h-full object-cover grayscale contrast-125"
               referrerPolicy="no-referrer"
@@ -162,7 +162,7 @@ export default function HeroGallery() {
                 </mask>
               </defs>
               <image
-                href="/public/images/stage.jpg"
+                href="/images/stage.jpg"
                 width="100%"
                 height="100%"
                 preserveAspectRatio="xMidYMid slice"

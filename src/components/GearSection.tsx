@@ -44,7 +44,7 @@ export default function GearSection() {
         <div className="order-1 md:order-2 relative h-[60vh] md:h-[80vh] w-full">
           <motion.img
             style={{ y: y1 }}
-            src="/public/images/guitar.jpg"
+            src="/images/guitar.jpg"
             alt="Guitar Gear"
             className="absolute inset-0 w-full h-full object-cover z-10 grayscale contrast-150"
             referrerPolicy="no-referrer"
