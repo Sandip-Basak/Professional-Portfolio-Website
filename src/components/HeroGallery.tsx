@@ -1,11 +1,11 @@
-import { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { motion, useScroll, useTransform, useMotionValue, useSpring, useMotionTemplate, useVelocity, useMotionValueEvent, AnimatePresence } from 'motion/react';
 
 const GIGS = [
-  { id: 1, title: "MADISON SQUARE", date: "OCT 24", img: "https://picsum.photos/seed/concert1/1000/800" },
-  { id: 2, title: "RED ROCKS", date: "NOV 12", img: "https://picsum.photos/seed/concert2/1000/800" },
-  { id: 3, title: "WEMBLEY", date: "DEC 05", img: "https://picsum.photos/seed/concert3/1000/800" },
-  { id: 4, title: "TOKYO DOME", date: "JAN 18", img: "https://picsum.photos/seed/concert4/1000/800" },
+  { id: 1, title: "MADISON SQUARE", date: "OCT 24", img: "/public/images/madison.jpg" },
+  { id: 2, title: "RED ROCKS", date: "NOV 12", img: "/public/images/redrocks.jpg" },
+  { id: 3, title: "WEMBLEY", date: "DEC 05", img: "/public/images/wembley.jpg" },
+  { id: 4, title: "TOKYO DOME", date: "JAN 18", img: "/public/images/tokyodome.jpg" },
 ];
 
 export default function HeroGallery() {
@@ -25,9 +25,9 @@ export default function HeroGallery() {
   }, []);
 
   // Phase 1: Shrink (0 to 0.25)
-  const heroWidth = useTransform(scrollYProgress, [0, 0.25], ["100vw", isMobile ? "80vw" : "50vw"]);
-  const heroHeight = useTransform(scrollYProgress, [0, 0.25], ["100vh", "60vh"]);
-  const heroMarginLeft = useTransform(scrollYProgress, [0, 0.25], ["0vw", isMobile ? "10vw" : "25vw"]);
+  const heroWidth = useTransform(scrollYProgress, [0, 0.25], ["100vw", isMobile ? "65vw" : "50vw"]);
+  const heroHeight = useTransform(scrollYProgress, [0, 0.25], ["100vh", isMobile ? "45vh" : "60vh"]);
+  const heroMarginLeft = useTransform(scrollYProgress, [0, 0.25], ["0vw", isMobile ? "5vw" : "25vw"]);
   const heroTextOpacity = useTransform(scrollYProgress, [0.2, 0.25], [1, 0]);
   
   // Phase 2: Horizontal Scroll (0.25 to 1)
@@ -100,14 +100,14 @@ export default function HeroGallery() {
 
         {/* Signature Overlay (Fades out) */}
         <motion.div style={{ opacity: heroTextOpacity }} className="absolute bottom-20 right-10 md:right-32 z-30 pointer-events-none">
-          <p className="font-signature text-4xl md:text-6xl text-neon opacity-80">J. Hendrix</p>
+          <p className="font-signature text-4xl md:text-6xl text-neon opacity-80">L .Hendrix</p>
         </motion.div>
 
         {/* Scroll Indicator (Fades out) */}
-        <motion.div style={{ opacity: heroTextOpacity }} className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2">
+        {/* <motion.div style={{ opacity: heroTextOpacity }} className="absolute bottom-10 left-1/2 -translate-x-1/2 z-30 flex flex-col items-center gap-2">
           <span className="font-sans text-xs uppercase tracking-[0.2em] text-white/50">Scroll</span>
           <div className="w-[1px] h-12 bg-gradient-to-b from-white/50 to-transparent"></div>
-        </motion.div>
+        </motion.div> */}
 
         {/* Horizontal Track */}
         <motion.div 
@@ -128,7 +128,7 @@ export default function HeroGallery() {
             <div className="absolute inset-0 bg-neon mix-blend-overlay opacity-20 z-10 pointer-events-none"></div>
             
             <img
-              src="https://picsum.photos/seed/guitarist/800/1200"
+              src="/public/images/guitarist.jpg"
               alt="Guitarist"
               className="absolute inset-0 w-full h-full object-cover grayscale contrast-125"
               referrerPolicy="no-referrer"
@@ -154,7 +154,7 @@ export default function HeroGallery() {
                       x="-20%"
                       y="-150"
                       width="140%"
-                      height="300"
+                      height="400"
                       fill="white"
                       filter="url(#liquid-edge)"
                     />
@@ -162,7 +162,7 @@ export default function HeroGallery() {
                 </mask>
               </defs>
               <image
-                href="https://picsum.photos/seed/shredding/800/1200"
+                href="/public/images/stage.jpg"
                 width="100%"
                 height="100%"
                 preserveAspectRatio="xMidYMid slice"

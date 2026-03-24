@@ -16,7 +16,7 @@ export default function Footer() {
       </div>
       <div className="max-w-7xl mx-auto mt-10 flex justify-between items-center">
         <p className="font-sans text-white/30 text-xs uppercase tracking-widest">© 2026 Axe Grinder</p>
-        <p className="font-signature text-2xl text-white/20">J. Hendrix</p>
+        <p className="font-signature text-2xl text-white/20">L .Hendrix</p>
       </div>
     </footer>
   );

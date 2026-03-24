@@ -19,7 +19,7 @@ export default function AboutSection() {
         <div className="relative h-[60vh] md:h-[80vh] w-full">
           <motion.div style={{ scale, opacity }} className="absolute inset-0 z-10">
             <img
-              src="https://picsum.photos/seed/guitarist-live/1000/1200"
+              src="/public/images/Guitaristlive.jpg"
               alt="Live Performance"
               className="w-full h-full object-cover grayscale contrast-150"
               referrerPolicy="no-referrer"
